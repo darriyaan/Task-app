@@ -17,11 +17,9 @@ export class ToDoItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick(todo:Todo) {
-    this.todoDelete.emit(todo);
-  }
+  onClick = (todo:Todo) => this.todoDelete.emit(todo);
 
-  onCheckboxClick(todo:Todo){
-    this.todoCheckbox.emit(todo);
-  }
+  onCheckboxClick = (todo:Todo) => 
+  this.todoCheckbox.emit(todo);
+
 }
